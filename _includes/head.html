@@ -9,9 +9,9 @@
   {% seo %}
   <!-- End SEO -->
 
-  <link rel="stylesheet" href="{{ "/assets/main.css" | relative_url }}">
-  <link rel="stylesheet" type="text/css" href="/css/override.css">
 
+    <title>{{ page.title }}</title>
+    <link rel="stylesheet" href="/assets/css/styles.css">
   {% feed_meta %}
 
   {% if jekyll.environment == 'production' and site.google_analytics -%}
