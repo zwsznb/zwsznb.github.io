@@ -18,6 +18,11 @@ message: 按钮
             message: "Hello Element Plus",
           };
         },
+        methods: {
+            btnclk(){
+                console.log("{{page.message}}");
+            }       
+        }
       };
       const app = Vue.createApp(App);
       app.use(ElementPlus);
