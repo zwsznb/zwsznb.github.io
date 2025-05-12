@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Test
+message: 按钮
 ---
 
 <!--     <h1>Hello World!</h1> -->
@@ -8,7 +9,7 @@ title: Test
     <h1>this is {{ page.title }} page</h1>
     <p>assigned default layout</p> -->
  <div id="app">
-      <el-button>{{ message }}</el-button>
+      <el-button>{{ page.message }}</el-button>
     </div>
     <script>
       const App = {
