@@ -4,31 +4,7 @@ title: Test
 ---
 
 <!--     <h1>Hello World!</h1> -->
-<!--     <h1>{{ "Hello World!" | downcase }}</h1>
+    <h1>{{ "Hello World!" | downcase }}</h1>
     <h1>this is {{ page.title }} page</h1>
-    <p>assigned default layout</p> -->
- <div id="app">
-    <el-button @click="visible = true">Button</el-button>
-    <el-dialog :visible.sync="visible" title="Hello world">
-      <p>{{ pagess.title }}</p>
-      <p>{{ pageTitle }}</p>
-    </el-dialog>
-  </div>
-<script>
-    window.onload=()=>{  
-    console.log("{{ page.tilte }}");
-    };
-    new Vue({
-      el: '#app',
-      data: function() {
-        return 
-        {
-            visible: false,
-            pagess:{
-                title:"aaaaa"
-            },
-            pageTitle: "{{ page.title }}"
-        }
-      }
-    })
-  </script>
+    <p>assigned default layout</p>
+
