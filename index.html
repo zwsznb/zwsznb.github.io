@@ -10,7 +10,8 @@ title: Test
  <div id="app">
     <el-button @click="visible = true">Button</el-button>
     <el-dialog :visible.sync="visible" title="Hello world">
-      <p>{{ page.title }}</p>
+      <p>{{ pagess.title }}</p>
+      <p>{{ pageTitle }}</p>
     </el-dialog>
   </div>
 <script>
@@ -23,9 +24,10 @@ title: Test
         return 
         {
             visible: false,
-            page:{
+            pagess:{
                 title:"aaaaa"
-            }
+            },
+            pageTitle: "{{ page.title }}"
         }
       }
     })
