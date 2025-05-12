@@ -13,7 +13,6 @@
     <title>{{ page.title }}</title>
     <link rel="stylesheet" href="/assets/css/styles.css">
     <script src="/assets/js/two.min.js"></script>
-  <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
   {% feed_meta %}
 
   {% if jekyll.environment == 'production' and site.google_analytics -%}
@@ -21,8 +20,4 @@
   {% include google-analytics.html %}
   <!-- End Google Analytics -->
   {%- endif %}
-    <!-- import Vue before Element -->
-  <script src="https://unpkg.com/vue@2/dist/vue.js"></script>
-  <!-- import JavaScript -->
-  <script src="https://unpkg.com/element-ui/lib/index.js"></script>
 </head>
