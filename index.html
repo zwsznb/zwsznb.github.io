@@ -7,13 +7,3 @@ title: Test
     <h1>{{ "Hello World!" | downcase }}</h1>
     <h1>this is {{ page.title }} page</h1>
     <p>assigned default layout</p>
-    <script>
-      var two = new Two({
-        fullscreen: true,
-        autostart: true
-      }).appendTo(document.body);
-      var rect = two.makeRectangle(two.width / 2, two.height / 2, 50 ,50);
-      two.bind('update', function() {
-        rect.rotation += 0.001;
-      });
-    </script>
