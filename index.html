@@ -1,7 +1,8 @@
 --- 
 layout: default 
 ---
-<div class="common-layout">
+<div id="app">
+     <div class="common-layout">
     <el-container>
         <el-aside width="200px">Aside</el-aside>
         <el-container>
@@ -10,3 +11,15 @@ layout: default
         </el-container>
     </el-container>
 </div>
+</div>
+    <script>
+      const App = {
+        data() {
+          return {
+          };
+        },
+      };
+      const app = Vue.createApp(App);
+      app.use(ElementPlus);
+      app.mount("#app");
+    </script>
