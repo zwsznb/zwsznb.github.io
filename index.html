@@ -1,32 +1,12 @@
+--- 
+layout: default 
 ---
-layout: default
-title: Test
-message: 按钮
----
-
-<!--     <h1>Hello World!</h1> -->
-<!--     <h1>{{ "Hello World!" | downcase }}</h1>
-    <h1>this is {{ page.title }} page</h1>
-    <p>assigned default layout</p> -->
- <div id="app">
-      <el-button @click="btnclk">{{ page.message }}</el-button>
-    </div>
-    <script>
-      const App = {
-        data() {
-          return {
-            message: "Hello Element Plus",
-          };
-        },
-        methods: {
-            btnclk(){
-                console.log("11111");
-                console.log("{{page.message}}");
-            }       
-        }
-      };
-      const app = Vue.createApp(App);
-      app.use(ElementPlus);
-      app.mount("#app");
-    </script>
-
+<div class="common-layout">
+    <el-container>
+        <el-aside width="200px">Aside</el-aside>
+        <el-container>
+            <el-header>Header</el-header>
+            <el-main>Main</el-main>
+        </el-container>
+    </el-container>
+</div>
