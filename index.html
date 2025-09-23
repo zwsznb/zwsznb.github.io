@@ -13,6 +13,7 @@ layout: default
                     <div>{{s.url}}</div>
                     <br/> {% endfor %}
                 </el-main>
+                <div>{{test}}</div>
             </el-container>
         </el-container>
     </div>
@@ -20,7 +21,9 @@ layout: default
 <script>
     const App = {
         data() {
-            return {};
+            return {
+                test: "测试"
+            };
         },
     };
     const app = Vue.createApp(App);
