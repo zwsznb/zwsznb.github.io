@@ -65,12 +65,11 @@ pageSize: 20
         data() {
             return {
                 source: {{site.data.source | jsonify}},
-                types: {{site.data.types | jsonify}}
             };
         },
         methods:{
             changeType(index){
-                window.location.href = "/?type="+index; 
+                console.log(this.source)
             },
             jumpLink(url){
                 window.location.href = url;
