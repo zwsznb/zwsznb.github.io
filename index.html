@@ -48,7 +48,7 @@ layout: default
                 source: {{site.data.source | jsonify}},
                 types: {{site.data.types | jsonify}},
                 viewSource: [],
-                currentType: 1,
+                currentType: 0,
                 searchWord: ''
             };
         },
@@ -59,7 +59,7 @@ layout: default
             changeType(index){
                 this.currentType = index;
                 this.searchWord = '';
-                if(this.currentType == 1)
+                if(this.currentType == 0)
                 this.viewSource = this.source;
                 else
                 this.viewSource = this.source.filter(item => item.type == index);
@@ -68,7 +68,7 @@ layout: default
                 window.location.href = url;
             },
             searchSource(){
-                if(this.currentType == 1)
+                if(this.currentType == 0)
                 this.viewSource = this.source.filter(item => item.sourceName.includes(this.searchWord));
                 else
                 this.viewSource = this.source.filter(item => item.sourceName.includes(this.searchWord)&&item.type == this.currentType);
