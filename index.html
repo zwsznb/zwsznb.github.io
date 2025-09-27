@@ -8,9 +8,11 @@ pageSize: 20
             <el-aside style="width: 15%;overflow: hidden;">
                 <h2 style="margin-top: 60%;margin-left: 30px;text-align: center;">分类</h2>
                 <el-card class="hide-scrollbar" style="margin-left: 30px;overflow: auto;height: 60%;">
-                    <div v-for="o in 30" :key="o" style="padding: 10px 0;text-align: center;">
-                      {{'列表内容 ' + o }}
+                    {% for type in site.data.types %}
+                    <div @click="changeType({{type.index}})" style="padding: 10px 0;text-align: center;">
+                      {{ type.name }}
                     </div>
+                    {% endfor %}
                   </el-card>
 
             </el-aside>
@@ -31,11 +33,13 @@ pageSize: 20
                    
                       <!-- 资源列表 -->
                       <div class="hide-scrollbar" style="margin-top: 30px;height: 80%;overflow: auto;text-align: center;">
+                        {% for s in site.data.source %}
                         <el-card v-for="i in 40" shadow="always" style="display: inline-block;margin: 0 10px 20px 10px;">
-                            <span style="margin-right: 10px;">寻秦记</span>
-                            <el-button type="primary" size="small">复制链接</el-button>
-                            <el-button type="success" size="small">直接跳转</el-button>
+                            <span style="margin-right: 10px;">{{s.sourceName}}</span>
+                            <el-button type="primary" size="small" @click="copyLink({{s.url}})">复制链接</el-button>
+                            <el-button type="success" size="small" @click="jumpLink({{s.url}})">直接跳转</el-button>
                           </el-card>
+                          {% endfor %}
                       </div>
                       <br/>
 <!-- 分页 -->
@@ -64,6 +68,17 @@ pageSize: 20
                 
             };
         },
+        methods:{
+            changeType(index){
+                console.log(index);  
+            },
+            copyLink(url){
+                console.log(url);
+            },
+            jumpLink(url){
+                console.log(url);
+            }
+        }
     };
     const app = Vue.createApp(App);
     app.use(ElementPlus);
