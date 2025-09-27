@@ -1,6 +1,5 @@
 ---
 layout: default
-test: "{{test}}"
 ---
 <div id="app">
     <div class="common-layout">
@@ -14,8 +13,8 @@ test: "{{test}}"
                     <div>{{s.url}}</div>
                     <br/> {% endfor %}
                 </el-main>
-                <div>{{page.test}}</div>
-                <a url="/source?page=1">1</a>
+                <div>count: {{site.data.source|size}}</div>
+                <a href="/source?page=1"></a>
             </el-container>
         </el-container>
     </div>
