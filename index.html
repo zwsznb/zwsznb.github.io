@@ -73,6 +73,7 @@ pageSize: 20
                 console.log(index);  
             },
             copyLink(url){
+                console.log(url);
                 navigator.clipboard.writeText(url)
         .then(() => {
           alert("已复制到剪贴板: " + text);
