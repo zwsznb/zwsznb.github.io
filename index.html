@@ -9,10 +9,9 @@ pageSize: 20
                 <h2 style="margin-top: 60%;margin-left: 30px;text-align: center;">分类</h2>
                 <el-card class="hide-scrollbar" style="margin-left: 30px;overflow: auto;height: 60%;">
                     {% for type in site.data.types %}
-                    <!-- <div @click="changeType({{type.index}})" style="padding: 10px 0;text-align: center;">
+                    <div @click="changeType({{type.index}})" style="padding: 10px 0;text-align: center;">
                       {{ type.name }}
-                    </div> -->
-                    <a style="text-decoration: none;" href="https://zwsznb.github.io?type={{type.index}}">{{ type.name }}</a>
+                    </div>
                     {% endfor %}
                   </el-card>
 
@@ -70,7 +69,7 @@ pageSize: 20
         },
         methods:{
             changeType(index){
-                console.log(index);  
+                window.location.href = "/?type="+index; 
             },
             jumpLink(url){
                 window.location.href = url;
