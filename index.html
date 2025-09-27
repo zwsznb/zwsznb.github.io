@@ -73,10 +73,16 @@ pageSize: 20
                 console.log(index);  
             },
             copyLink(url){
-                console.log(url);
+                navigator.clipboard.writeText(url)
+        .then(() => {
+          alert("已复制到剪贴板: " + text);
+        })
+        .catch(err => {
+          console.error("复制失败:", err);
+        });
             },
             jumpLink(url){
-                console.log(url);
+                window.location.href = url;
             }
         }
     };
