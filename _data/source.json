@@ -1,111 +1,21 @@
 [{
         "sourceName": "百度",
-        "url": "http://baidu.com"
+        "url": "http://baidu.com",
+        "type": 1
     },
     {
         "sourceName": "百度1",
-        "url": "http://baidu.com"
+        "url": "http://baidu.com",
+        "type": 2
     },
     {
         "sourceName": "百度2",
-        "url": "http://baidu.com"
+        "url": "http://baidu.com",
+        "type":2
     },
     {
         "sourceName": "百度3",
-        "url": "http://baidu.com"
-    },
-    {
-        "sourceName": "百度3",
-        "url": "http://baidu.com"
-    }
-    ,
-    {
-        "sourceName": "百度3",
-        "url": "http://baidu.com"
-    }
-    ,
-    {
-        "sourceName": "百度3",
-        "url": "http://baidu.com"
-    }
-    ,
-    {
-        "sourceName": "百度3",
-        "url": "http://baidu.com"
-    }
-    ,
-    {
-        "sourceName": "百度3",
-        "url": "http://baidu.com"
-    }
-    ,
-    {
-        "sourceName": "百度3",
-        "url": "http://baidu.com"
-    }
-    ,
-    {
-        "sourceName": "百度3",
-        "url": "http://baidu.com"
-    }
-    ,
-    {
-        "sourceName": "百度3",
-        "url": "http://baidu.com"
-    }
-    ,
-    {
-        "sourceName": "百度3",
-        "url": "http://baidu.com"
-    }
-    ,
-    {
-        "sourceName": "百度3",
-        "url": "http://baidu.com"
-    }
-    ,
-    {
-        "sourceName": "百度3",
-        "url": "http://baidu.com"
-    }
-    ,
-    {
-        "sourceName": "百度3",
-        "url": "http://baidu.com"
-    }
-    ,
-    {
-        "sourceName": "百度3",
-        "url": "http://baidu.com"
-    }
-    ,
-    {
-        "sourceName": "百度3",
-        "url": "http://baidu.com"
-    }
-    ,
-    {
-        "sourceName": "百度3",
-        "url": "http://baidu.com"
-    }
-    ,
-    {
-        "sourceName": "百度3",
-        "url": "http://baidu.com"
-    }
-    ,
-    {
-        "sourceName": "百度3",
-        "url": "http://baidu.com"
-    }
-    ,
-    {
-        "sourceName": "百度3",
-        "url": "http://baidu.com"
-    }
-    ,
-    {
-        "sourceName": "百度3",
-        "url": "http://baidu.com"
+        "url": "http://baidu.com",
+        "type":2
     }
 ]
