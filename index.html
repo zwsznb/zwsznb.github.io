@@ -58,7 +58,11 @@ layout: default
         methods:{
             changeType(index){
                 this.currentType = index;
-               this.viewSource = this.source.filter(item => item.type == index);
+                this.searchWord = '';
+                if(this.currentType == 1)
+                this.viewSource = this.source;
+                else
+                this.viewSource = this.source.filter(item => item.type == index);
             },
             jumpLink(url){
                 window.location.href = url;
