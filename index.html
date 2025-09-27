@@ -2,6 +2,7 @@
 layout: default
 pageSize: 20
 ---
+[[test]]
 <div id="app">
     <div class="common-layout">
         <el-container class="main-box">
@@ -65,6 +66,7 @@ pageSize: 20
         data() {
             return {
                 source: {{site.data.source | jsonify}},
+                test: "测试"
             };
         },
         methods:{
@@ -78,6 +80,7 @@ pageSize: 20
     };
     const app = Vue.createApp(App);
     app.use(ElementPlus);
+    app.config.compilerOptions.delimiters = ['[[', ']]']
     app.mount("#app");
 </script>
 
