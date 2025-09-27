@@ -47,13 +47,13 @@ layout: default
             return {
                 source: {{site.data.source | jsonify}},
                 types: {{site.data.types | jsonify}},
-                viewSource: []
-                currentType: 1
+                viewSource: [],
+                currentType: 1,
                 searchWord: ''
             };
         },
         beforeCreate: function () {
-             this.changeType(1)
+             this.changeType(this.currentType)
         },
         methods:{
             changeType(index){
