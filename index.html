@@ -66,6 +66,9 @@ layout: default
                 viewSource: []
             };
         },
+        beforeCreate: function () {
+             this.changeType(1)
+        },
         methods:{
             changeType(index){
                this.viewSource = this.source.filter(item => item.type == index);
