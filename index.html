@@ -52,17 +52,21 @@ layout: default
                 searchWord: ''
             };
         },
-        Created: function () {
+        mounted: function () {
              this.changeType(this.currentType)
         },
         methods:{
             changeType(index){
+                this.currentType = index;
                this.viewSource = this.source.filter(item => item.type == index);
             },
             jumpLink(url){
                 window.location.href = url;
             },
             searchSource(){
+                if(this.currentType == 1)
+                this.viewSource = this.source.filter(item => item.sourceName.includes(this.searchWord));
+                else
                 this.viewSource = this.source.filter(item => item.sourceName.includes(this.searchWord)&&item.type == this.currentType);
             }
         }
