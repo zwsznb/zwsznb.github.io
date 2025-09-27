@@ -2,7 +2,6 @@
 layout: default
 pageSize: 20
 ---
-[[test]]
 <div id="app">
     <div class="common-layout">
         <el-container class="main-box">
@@ -11,7 +10,7 @@ pageSize: 20
                 <el-card class="hide-scrollbar" style="margin-left: 30px;overflow: auto;height: 60%;">
                     {% for type in site.data.types %}
                     <div @click="changeType({{type.index}})" style="padding: 10px 0;text-align: center;cursor: pointer;">
-                      {{ type.name }}
+                      {{ type.name }}[[test]]
                     </div>
                     {% endfor %}
                   </el-card>
