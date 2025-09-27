@@ -4,17 +4,54 @@ layout: default
 <div id="app">
     <div class="common-layout">
         <el-container class="main-box">
-            <el-aside width="200px"></el-aside>
+            <el-aside style="width: 15%;overflow: hidden;">
+                <h2 style="margin-top: 60%;margin-left: 30px;text-align: center;">分类</h2>
+                <el-card class="hide-scrollbar" style="margin-left: 30px;overflow: auto;height: 60%;">
+                    <div v-for="o in 30" :key="o" style="padding: 10px 0;text-align: center;">
+                      {{'列表内容 ' + o }}
+                    </div>
+                  </el-card>
+
+            </el-aside>
             <el-container>
-                <el-header></el-header>
-                <el-main>
-                    {% for s in site.data.source %}
-                    <div>{{s.sourceName}}</div>
-                    <div>{{s.url}}</div>
-                    <br/> {% endfor %}
+                <el-header>
+                </el-header>
+                <el-main class="hide-scrollbar">
+                    <el-row :gutter="20">
+                        <el-col :span="7"></el-col>
+                        <el-col :span="10">
+                             <!-- 搜索框 -->
+                    <div style="display: flex;">
+                        <el-input placeholder="请输入内容" size="large" v-model="input3"/>
+                      </div>
+                       </el-col>
+                        <el-col :span="7"><el-button size="large" type="primary">搜索</el-button></el-col>
+                      </el-row>
+                   
+                      <!-- 资源列表 -->
+                      <div class="hide-scrollbar" style="margin-top: 30px;height: 80%;overflow: auto;text-align: center;">
+                        <el-card v-for="i in 40" shadow="always" style="display: inline-block;margin: 0 10px 20px 10px;">
+                            <span style="margin-right: 10px;">寻秦记</span>
+                            <el-button type="primary" size="small">复制链接</el-button>
+                            <el-button type="success" size="small">直接跳转</el-button>
+                          </el-card>
+                      </div>
+                      <br/>
+<!-- 分页 -->
+
+<el-row :gutter="20">
+    <el-col :span="7"></el-col>
+    <el-col :span="10">
+         <!-- 搜索框 -->
+         <el-pagination
+         background
+         layout="prev, pager, next"
+         :total="1000">
+       </el-pagination></el-col>
+    <el-col :span="7"></el-col>
+  </el-row>
+                    
                 </el-main>
-                <div>count: {{site.data.source|size}}</div>
-                <a href="/source?page=1">测试</a>
             </el-container>
         </el-container>
     </div>
@@ -31,3 +68,6 @@ layout: default
     app.use(ElementPlus);
     app.mount("#app");
 </script>
+
+
+

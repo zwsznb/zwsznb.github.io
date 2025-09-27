@@ -20,6 +20,21 @@
         right: 0;
         bottom: 0;
     }
+    /* 应用于所有你想隐藏滚动条但仍可滚动的元素（body 也可以） */
+  .hide-scrollbar {
+    overflow: auto;                 /* 保持可滚动 */
+    -webkit-overflow-scrolling: touch; /* iOS 动量滚动 */
+    -ms-overflow-style: none;       /* IE/Edge */
+    scrollbar-width: none;          /* Firefox */
+  }
+
+  /* Chrome, Safari, Edge(Chromium) */
+  .hide-scrollbar::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+    background: transparent;
+    display: none; /* 有些浏览器支持，作为兜底 */
+  }
 </style>
 
 <body>
