@@ -36,8 +36,7 @@ pageSize: 20
                         {% for s in site.data.source %}
                         <el-card shadow="always" style="display: inline-block;margin: 0 10px 20px 10px;">
                             <span style="margin-right: 10px;">{{s.sourceName}}</span>
-                            <el-button type="primary" size="small" @click="copyLink('{{s.url}}')">复制链接</el-button>
-                            <el-button type="success" size="small" @click="jumpLink('{{s.url}}')">直接跳转</el-button>
+                            <el-button type="success" size="small" @click="jumpLink('{{s.url}}')">夸克网盘</el-button>
                           </el-card>
                           {% endfor %}
                       </div>
