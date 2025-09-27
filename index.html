@@ -7,7 +7,7 @@ layout: default
             <el-aside style="width: 15%;overflow: hidden;">
                 <h2 style="margin-top: 60%;margin-left: 30px;text-align: center;">分类</h2>
                 <el-card class="hide-scrollbar" style="margin-left: 30px;overflow: auto;height: 60%;">
-                    <div v-for="(item,index) in types" :key="index" @click="changeType(item.index)" style="padding: 10px 0;text-align: center;cursor: pointer;">
+                    <div v-for="(item,index) in types" :key="index" @click="changeType(item.index)" style="padding: 10px 0;text-align: center;cursor: pointer;background-color: red;">
                        [[ item.name ]]
                     </div>
                   </el-card>
