@@ -1,6 +1,5 @@
 ---
 layout: default
-pageSize: 20
 ---
 <div id="app">
     <div class="common-layout">
@@ -8,11 +7,9 @@ pageSize: 20
             <el-aside style="width: 15%;overflow: hidden;">
                 <h2 style="margin-top: 60%;margin-left: 30px;text-align: center;">分类</h2>
                 <el-card class="hide-scrollbar" style="margin-left: 30px;overflow: auto;height: 60%;">
-                    {% for type in site.data.types %}
-                    <div @click="changeType({{type.index}})" style="padding: 10px 0;text-align: center;cursor: pointer;">
-                      {{ type.name }}[[test]]
+                    <div v-for="(item,index) in source" :key="index" @click="changeType(item.type)" style="padding: 10px 0;text-align: center;cursor: pointer;">
+                       [[ item.sourceName ]]
                     </div>
-                    {% endfor %}
                   </el-card>
 
             </el-aside>
@@ -33,12 +30,10 @@ pageSize: 20
                    
                       <!-- 资源列表 -->
                       <div class="hide-scrollbar" style="margin-top: 30px;height: 80%;overflow: auto;">
-                        {% for s in site.data.source %}
-                        <el-card shadow="always" style="display: inline-block;margin: 0 10px 20px 10px;">
-                            <span style="margin-right: 10px;">{{s.sourceName}}</span>
-                            <el-button type="success" size="small" @click="jumpLink('{{s.url}}')">夸克网盘</el-button>
+                        <el-card v-for="(item,index) in source" :key="index" shadow="always" style="display: inline-block;margin: 0 10px 20px 10px;">
+                            <span style="margin-right: 10px;">[[ item.sourceName ]]</span>
+                            <el-button type="success" size="small" @click="jumpLink(item.url)">夸克网盘</el-button>
                           </el-card>
-                          {% endfor %}
                       </div>
                       <br/>
 <!-- 分页 -->
@@ -49,8 +44,8 @@ pageSize: 20
          <el-pagination
          background
          layout="prev, pager, next"
-         :page-size="{{page.pageSize}}"
-         :total="{{site.data.source | size}}">
+         :page-size="20"
+         :total="10">
        </el-pagination></el-col>
     <el-col :span="7"></el-col>
   </el-row>
@@ -65,12 +60,12 @@ pageSize: 20
         data() {
             return {
                 source: {{site.data.source | jsonify}},
-                test: "测试"
+                types: {{site.data.types | jsonify}},
             };
         },
         methods:{
             changeType(index){
-                console.log(this.source)
+               
             },
             jumpLink(url){
                 window.location.href = url;
