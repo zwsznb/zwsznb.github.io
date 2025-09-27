@@ -18,12 +18,10 @@ layout: default
                 </el-header>
                 <el-main class="hide-scrollbar">
                     <el-row :gutter="20">
-                        <el-col :span="5"></el-col>
-                        <el-col :span="10">
+                        <el-col :span="3"></el-col>
+                        <el-col :span="14">
                              <!-- 搜索框 -->
-                    <div style="display: flex;">
                         <el-input placeholder="请输入内容" size="large" v-model="searchWord"/>
-                      </div>
                        </el-col>
                         <el-col :span="7"><el-button size="large" type="primary" @click="searchSource">搜索</el-button></el-col>
                       </el-row>
