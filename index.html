@@ -1,6 +1,6 @@
 ---
 layout: default
-template: test
+template: <div>{{test}}</div>
 ---
 <div id="app">
     <div class="common-layout">
@@ -14,7 +14,7 @@ template: test
                     <div>{{s.url}}</div>
                     <br/> {% endfor %}
                 </el-main>
-                {{template}}--------
+                {{page.template}}--------
             </el-container>
         </el-container>
     </div>
