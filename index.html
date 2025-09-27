@@ -44,8 +44,8 @@ pageSize: 20
 <!-- 分页 -->
 
 <el-row :gutter="20">
-    <el-col :span="7"></el-col>
-    <el-col :span="10">
+    <el-col :span="10"></el-col>
+    <el-col :span="7">
          <el-pagination
          background
          layout="prev, pager, next"
@@ -70,16 +70,6 @@ pageSize: 20
         methods:{
             changeType(index){
                 console.log(index);  
-            },
-            copyLink(url){
-                console.log(url);
-                navigator.clipboard.writeText(url)
-        .then(() => {
-          alert("已复制到剪贴板: " + text);
-        })
-        .catch(err => {
-          console.error("复制失败:", err);
-        });
             },
             jumpLink(url){
                 window.location.href = url;
