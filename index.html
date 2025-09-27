@@ -1,6 +1,46 @@
----
+<!-- ---
 layout: default
----
+--- -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Import style -->
+    <link rel="stylesheet" href="//unpkg.com/element-plus/dist/index.css" />
+    <!-- Import Vue 3 -->
+    <script src="//unpkg.com/vue@3"></script>
+    <!-- Import component library -->
+    <script src="//unpkg.com/element-plus"></script>
+</head>
+<style>
+    .main-box {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
+    /* 应用于所有你想隐藏滚动条但仍可滚动的元素（body 也可以） */
+  .hide-scrollbar {
+    overflow: auto;                 /* 保持可滚动 */
+    -webkit-overflow-scrolling: touch; /* iOS 动量滚动 */
+    -ms-overflow-style: none;       /* IE/Edge */
+    scrollbar-width: none;          /* Firefox */
+  }
+
+  /* Chrome, Safari, Edge(Chromium) */
+  .hide-scrollbar::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+    background: transparent;
+    display: none; /* 有些浏览器支持，作为兜底 */
+  }
+</style>
+
+<body>
 <div id="app">
     <div class="common-layout">
         <el-container class="main-box">
@@ -71,3 +111,6 @@ layout: default
 
 
 
+</body>
+
+</html>
