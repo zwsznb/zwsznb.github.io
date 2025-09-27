@@ -64,7 +64,8 @@ pageSize: 20
     const App = {
         data() {
             return {
-                
+                source: {{site.data.source | jsonify}},
+                types: {{site.data.types | jsonify}}
             };
         },
         methods:{
