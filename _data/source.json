@@ -44,6 +44,16 @@
         "type":2
     },
     {
+        "sourceName": "巾帼枭雄 国粤双音轨",
+        "url": "https://pan.quark.cn/s/3824f97cddd8",
+        "type":2
+    },
+    {
+        "sourceName": "巾帼枭雄之义海豪情",
+        "url": "https://pan.quark.cn/s/2338409e8627",
+        "type":2
+    },
+    {
         "sourceName": "激战",
         "url": "https://pan.quark.cn/s/f7f0b2971811",
         "type":3
@@ -124,6 +134,11 @@
         "type":4
     },
     {
+        "sourceName": "灵能百分百",
+        "url": "https://pan.quark.cn/s/95180984847d",
+        "type":4
+    },
+    {
         "sourceName": "举重妖精金福珠",
         "url": "https://pan.quark.cn/s/35df047fdcb5",
         "type":5
@@ -159,6 +174,21 @@
         "type":6
     },
     {
+        "sourceName": "朝5晚9：帅气和尚爱上我",
+        "url": "https://pan.quark.cn/s/8a9cbec55960",
+        "type":6
+    },
+    {
+        "sourceName": "紧急救命",
+        "url": "https://pan.quark.cn/s/a1b4297208f3",
+        "type":6
+    },
+    {
+        "sourceName": "求婚大作战2007",
+        "url": "https://pan.quark.cn/s/f32e1e67623a",
+        "type":6
+    },
+    {
         "sourceName": "终极三国2009",
         "url": "https://pan.quark.cn/s/3735101affb1",
         "type":7
@@ -172,5 +202,10 @@
         "sourceName": "psp游戏",
         "url": "https://pan.quark.cn/s/4a7e9e27aae0",
         "type":9
+    },
+    {
+        "sourceName": "良医",
+        "url": "https://pan.quark.cn/s/d49de96a1859",
+        "type":10
     }
 ]
